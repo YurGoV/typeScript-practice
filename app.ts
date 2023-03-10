@@ -60,7 +60,7 @@ enum IsLoaded {LOADING, READY};
 let variable: string | number;
 variable = 'ddd';
 variable = 5;
-variable = false;
+// variable = false;
 
 // Зробіть змінну, яка може приймати лише одне значення з двох: 'enable' або 'disable'
 let literalVar: 'enable' | 'disable';
