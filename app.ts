@@ -7,12 +7,25 @@ let empty = null;
 let notInitialize = undefined;
 let callback = (a) => { return 100 + a };
 */
-let age:number = 50;
+let age:number;
+age = 50;
+let simpleName:string;
+simpleName = 'Max';
+let toggle:boolean;
+toggle = true;
+let empty:null;
+empty = null;
+let notInitialize:undefined
+notInitialize = undefined;
+let callback = (a:number) => number;//TODO: fix this
+callback = (a) => { return 100 + a };
+
+/* let age:number = 50;
 let simpleName:string = 'Max';
 let toggle:boolean = true;
 let empty:null = null;
 let notInitialize:undefined = undefined;
-let callback = (a:number): number => { return 100 + a };
+let callback = (a:number): number => { return 100 + a }; */
 
 
 // Задайте тип для змінної, в яку можна зберегти будь-яке значення.
@@ -21,7 +34,8 @@ let anything = -20;
 anything = 'Text';
 anything = {};
 */
-let anything:unknown = -20;
+let anything:any
+anything = -20;
 anything = 'Text';
 anything = {};
 
@@ -56,6 +70,17 @@ person = ['Max', 21];
 // статус завантаження. Завантажується (LOADING) та завантажена (READY).
 enum IsLoaded {LOADING, READY};
 
+const page = {// TODO: learn this
+    load: IsLoaded.READY
+}
+
+if(page.load == IsLoaded.LOADING) {
+    console.log('Сторінка завантажується');
+}
+if(page.load === IsLoaded.READY) {
+    console.log('Сторінка завантажена');
+}
+
 // Зробіть змінну, яка може приймати або рядок, або число.
 let variable: string | number;
 variable = 'ddd';
@@ -80,15 +105,15 @@ function customError() {
     throw new Error('Error');
 }
 */
-function showMessage(message): void {
+function showMessage(message:string): void {
     console.log(message);
 }
 
-function calc(num1, num2): number {
+function calc(num1:number, num2:number):number {
     return num1 + num2;
 }
 
-function customError(): never {
+function customError():never {
     throw new Error('Error');
 }
 
@@ -116,11 +141,11 @@ const page2 = {
 type MyType = {
     title: string,
     likes: number,
-    accounts: string [],
-    status: string,
+    accounts: string[],
+    status: 'open' | 'close',
     details?: {
-        createAt: string,
-        updateAt: string,
+        createAt: Date,// TODO: check date in TS
+        updateAt: Date,
     }
 }
 
